@@ -37,10 +37,6 @@
     <button type="button" class="icon-btn" id="full-btn" aria-label="Full screen" title="Full screen">
       <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8V3h5M12 3h5v5M17 12v5h-5M8 17H3v-5"/></svg>
     </button>
-    <a class="orig" href="pdp/" target="_blank" rel="noopener" aria-label="Open the original page on its own, in a new tab">
-      <span class="orig-long">Original page</span><span class="orig-short" aria-hidden="true">Original</span>
-      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4h9v9M16 4 5 15"/></svg>
-    </a>
   </div>
 </header>
 
@@ -54,7 +50,7 @@
     <div class="guide-scroll">
       <div class="guide-head">
         <p class="kicker"><span class="dot" aria-hidden="true"></span>The thinking</p>
-        <h2 id="guide-title" tabindex="-1">Four decisions, shown in the page itself.</h2>
+        <h2 id="guide-title" tabindex="-1">PDP Redesign</h2>
         <p class="lede">Keep using the page as you read. Choose a chapter to bring its part into view.</p>
         <button type="button" class="guide-close" id="guide-close" aria-label="Hide the thinking">
           <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15"/></svg>
@@ -63,42 +59,51 @@
 
       <ol class="index" id="index">
         <li><button type="button" data-go="0"><span class="i-num">01</span><span class="i-title">Choosing the shirt</span></button></li>
-        <li><button type="button" data-go="1"><span class="i-num">02</span><span class="i-title">Sizing with confidence</span></button></li>
-        <li><button type="button" data-go="2"><span class="i-num">03</span><span class="i-title">Four shirts, one week</span></button></li>
-        <li><button type="button" data-go="3"><span class="i-num">04</span><span class="i-title">The story, after the decision</span></button></li>
+        <li><button type="button" data-go="1"><span class="i-num">02</span><span class="i-title">Four shirts, one week</span></button></li>
+        <li><button type="button" data-go="2"><span class="i-num">03</span><span class="i-title">Shop the look</span></button></li>
+        <li><button type="button" data-go="3"><span class="i-num">04</span><span class="i-title">Sizing with confidence</span></button></li>
+        <li><button type="button" data-go="4"><span class="i-num">05</span><span class="i-title">The story, after the decision</span></button></li>
       </ol>
 
       <div class="chapters" id="chapters" aria-live="polite">
         <article class="chapter" data-chapter="0" data-target="buy">
-          <p class="c-num"><span>01</span> of 04</p>
+          <p class="c-num"><span>01</span> of 05</p>
           <h3 tabindex="-1">Choosing the shirt</h3>
           <p>Colour, fit, collar and sleeve sit together in one form. Until both sizes are chosen, the line above Add to bag asks for them; once they are, it names the exact shirt. The multibuy sits beside the price, in one colour kept for offers.</p>
           <p class="try"><span>Try</span>Pick a collar and a sleeve, then read the line above Add to bag.</p>
         </article>
-        <article class="chapter" data-chapter="1" data-target="fit" hidden>
-          <p class="c-num"><span>02</span> of 04</p>
-          <h3 tabindex="-1">Sizing with confidence</h3>
-          <p>Fit is drawn rather than described: classic, slim and extra slim side by side. The measurement table highlights the collar you have chosen, in inches or centimetres. Find my size turns a neck measurement into a collar size, and says plainly that it is guidance.</p>
-          <p class="try"><span>Try</span>Switch the table to centimetres, or use Find my size beside the size buttons.</p>
-        </article>
-        <article class="chapter" data-chapter="2" data-target="builder" hidden>
-          <p class="c-num"><span>03</span> of 04</p>
+        <article class="chapter" data-chapter="1" data-target="builder" hidden>
+          <p class="c-num"><span>02</span> of 05</p>
           <h3 tabindex="-1">Four shirts, one week</h3>
           <p>The four-shirt offer becomes a working week. Each day takes a shirt in your size and, if you like, a tie. Two meters show how close the week is to each offer, and the whole week goes to the bag in one step.</p>
           <p class="try"><span>Try</span>Add a shirt for Tuesday.</p>
         </article>
-        <article class="chapter" data-chapter="3" data-target="detail" hidden>
-          <p class="c-num"><span>04</span> of 04</p>
+        <article class="chapter" data-chapter="2" data-target="look" hidden>
+          <p class="c-num"><span>03</span> of 05</p>
+          <h3 tabindex="-1">Shop the look</h3>
+          <p>The outfit in the main photo is shoppable from the photo itself. Shop the look opens a side panel listing the shirt, tie and trousers in the shot. Each has its own Include tick, and the shirt and trouser sizes are chosen there. Whatever is ticked goes to the bag together, so one shirt can become a full outfit without leaving the page.</p>
+          <p class="try"><span>Try</span>Press Shop the look on the main product image.</p>
+        </article>
+        <article class="chapter" data-chapter="3" data-target="fit" hidden>
+          <p class="c-num"><span>04</span> of 05</p>
+          <h3 tabindex="-1">Sizing with confidence</h3>
+          <p>Fit is drawn rather than described: classic, slim and extra slim side by side. The measurement table highlights the collar you have chosen, in inches or centimetres. Find my size turns a neck measurement into a collar size, and says plainly that it is guidance.</p>
+          <p class="try"><span>Try</span>Switch the table to centimetres, or use Find my size beside the size buttons.</p>
+        </article>
+        <article class="chapter" data-chapter="4" data-target="detail" hidden>
+          <p class="c-num"><span>05</span> of 05</p>
           <h3 tabindex="-1">The story, after the decision</h3>
           <p>Below the buying decisions, the page slows down: what a twill weave does, why this collar is cut wide, and two dates from the house’s history. It is there for anyone who wants it, without standing between the shirt and the bag.</p>
           <p class="try"><span>Try</span>Read on to the cloth and the collar.</p>
         </article>
+
+
       </div>
     </div>
 
     <nav class="guide-nav" aria-label="Chapters">
       <button type="button" class="g-prev" id="g-prev"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4 6 10l6 6"/></svg><span>Previous</span></button>
-      <span class="g-pips" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="g-pips" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
       <button type="button" class="g-next" id="g-next"><span>Next</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 4 6 6-6 6"/></svg></button>
     </nav>
   </aside>

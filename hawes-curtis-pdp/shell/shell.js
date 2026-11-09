@@ -31,13 +31,18 @@
   const pdp = () => { try { return frame.contentWindow && frame.contentWindow.document.body ? frame.contentWindow : null } catch (e) { return null } }
 
   // Page sections in document order, and the chapter each one belongs to.
-  const SECTIONS = [['.pdp', 0], ['#builder', 2], ['#fit', 1], ['#detail', 3], ['#ymal', 3]]
+  // Chapter 3 (Shop the look) lives inside the gallery at the top of .pdp, so it has no section of its own here.
+  const SECTIONS = [['.pdp', 0], ['#builder', 1], ['#fit', 3], ['#detail', 4], ['#ymal', 4]]
   const TARGETS = {
     buy: w => (w.innerWidth > 760 ? w.document.querySelector('.pdp') : w.document.querySelector('.buy')),
     fit: w => w.document.querySelector('#fit'),
     builder: w => w.document.querySelector('#builder'),
     detail: w => w.document.querySelector('#detail'),
+    look: w => w.document.querySelector('#stlBtn'),
   }
+  // Where the target should land: most chapters align to the top; the Shop the look button sits low in the
+  // main image, so it is brought to about two thirds of the way down, with the photo above it in view.
+  const LANDING = { look: w => w.innerHeight * 0.66 }
 
   function sectionAtReadingLine() {
     const w = pdp(); if (!w) return null
@@ -70,8 +75,10 @@
 
   function scrollToChapter(i) {
     const w = pdp(); if (!w) return
-    const el = TARGETS[chapters[i].dataset.target](w); if (!el) return
-    const top = el.getBoundingClientRect().top + w.scrollY - (w.innerWidth > 760 ? 8 : 4)
+    const key = chapters[i].dataset.target
+    const el = TARGETS[key](w); if (!el) return
+    const offset = LANDING[key] ? LANDING[key](w) : (w.innerWidth > 760 ? 8 : 4)
+    const top = el.getBoundingClientRect().top + w.scrollY - offset
     w.scrollTo({ top: Math.max(0, top), behavior: reduced() ? 'auto' : 'smooth' })
   }
 
