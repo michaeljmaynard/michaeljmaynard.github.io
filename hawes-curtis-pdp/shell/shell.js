@@ -32,7 +32,7 @@
 
   // Page sections in document order, and the chapter each one belongs to.
   // Chapter 3 (Shop the look) lives inside the gallery at the top of .pdp, so it has no section of its own here.
-  const SECTIONS = [['.pdp', 0], ['#builder', 1], ['#fit', 3], ['#detail', 4], ['#ymal', 4]]
+  const SECTIONS = [['.pdp', 0], ['#builder', 2], ['#fit', 3], ['#detail', 4], ['#ymal', 4]]
   const TARGETS = {
     buy: w => (w.innerWidth > 760 ? w.document.querySelector('.pdp') : w.document.querySelector('.buy')),
     fit: w => w.document.querySelector('#fit'),
