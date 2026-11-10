@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en-GB" data-view="desktop" data-guide="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Smythson Diary Finder · Michael Maynard</title>
+<meta name="description" content="An interactive Smythson Diary Finder portfolio concept by Michael Maynard, with the thinking behind five design decisions.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FFFCF7">
+<link rel="icon" href="favicon-light.jpg" media="(prefers-color-scheme: light)">
+<link rel="icon" href="favicon-dark.jpg" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shell/shell.css">
+</head>
+<body>
+<a class="skip" href="#pdp-frame">Skip to the Diary Finder</a>
+
+<header class="bar" id="bar">
+  <div class="bar-id">
+    <a class="mark" href="https://michaeljmaynard.co.uk/" aria-label="Michael Maynard, portfolio">
+      <span class="mark-full">Michael Maynard</span><span class="mark-short" aria-hidden="true">MM</span>
+    </a>
+    <span class="bar-rule" aria-hidden="true"></span>
+    <p class="bar-title"><span class="bar-brand">Smythson</span><span class="bar-what"> · Diary Finder</span></p>
+  </div>
+
+  <div class="bar-controls">
+    <div class="seg" role="group" aria-label="Page width">
+      <button type="button" class="seg-btn" data-view-btn="desktop" aria-pressed="true">Desktop</button>
+      <button type="button" class="seg-btn" data-view-btn="mobile" aria-pressed="false">Mobile</button>
+    </div>
+    <button type="button" class="guide-btn" id="guide-btn" aria-pressed="false" aria-controls="guide">
+      <span class="dot" aria-hidden="true"></span><span class="guide-btn-label">Show the thinking</span>
+    </button>
+    <button type="button" class="icon-btn" id="full-btn" aria-label="Full screen" title="Full screen">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8V3h5M12 3h5v5M17 12v5h-5M8 17H3v-5"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="stage" id="stage">
+  <div class="frame-wrap" id="frame-wrap">
+    <p class="loading" id="loading" aria-hidden="true">Opening the page</p>
+    <iframe id="pdp-frame" src="finder/" title="Smythson Diary Finder, working and interactive"></iframe>
+  </div>
+
+  <aside class="guide" id="guide" aria-labelledby="guide-title" inert>
+    <div class="guide-scroll">
+      <div class="guide-head">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span>The thinking</p>
+        <h2 id="guide-title" tabindex="-1">Diary Finder Redesign</h2>
+        <p class="lede">Keep using the page as you read. Choose a chapter to bring its part into view.</p>
+        <button type="button" class="guide-close" id="guide-close" aria-label="Hide the thinking">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15"/></svg>
+        </button>
+      </div>
+
+      <ol class="index" id="index">
+        <li><button type="button" data-go="0"><span class="i-num">01</span><span class="i-title">A layout for how you plan</span></button></li>
+        <li><button type="button" data-go="1"><span class="i-num">02</span><span class="i-title">Size you can picture</span></button></li>
+        <li><button type="button" data-go="2"><span class="i-num">03</span><span class="i-title">Colour in context</span></button></li>
+        <li><button type="button" data-go="3"><span class="i-num">04</span><span class="i-title">A closer look at leather</span></button></li>
+        <li><button type="button" data-go="4"><span class="i-num">05</span><span class="i-title">A recommendation you can check</span></button></li>
+      </ol>
+
+      <div class="chapters" id="chapters" aria-live="polite">
+        <article class="chapter" data-chapter="0" data-target="layout">
+          <p class="c-num"><span>01</span> of 05</p>
+          <h3 tabindex="-1">A layout for how you plan</h3>
+          <p>The first choice is how much of your time you want to see at once. An open spread makes the difference between a day on its own page and a week at a glance visible. The diary sketch beside the questions carries that choice forward.</p>
+          <p class="try"><span>Try</span>Switch between Day-per-Page and Week-to-View and compare the two spreads.</p>
+        </article>
+        <article class="chapter" data-chapter="1" data-target="size" hidden>
+          <p class="c-num"><span>02</span> of 05</p>
+          <h3 tabindex="-1">Size you can picture</h3>
+          <p>Desk, Mid-Size and Pocket sit against the same sheet of A4, giving each size a familiar point of reference. The historical size guide adds model-by-model measurements for anyone who wants a more precise comparison.</p>
+          <p class="try"><span>Try</span>Switch from Desk to Pocket, then compare a model in the size guide.</p>
+        </article>
+        <article class="chapter" data-chapter="2" data-target="colour" hidden>
+          <p class="c-num"><span>03</span> of 05</p>
+          <h3 tabindex="-1">Colour in context</h3>
+          <p>Three colour families keep the choice manageable, with original photography showing the range within each. Individual swatches tint the diary sketch so you can explore shades while keeping your broader colour preference.</p>
+          <p class="try"><span>Try</span>Choose The Bright Side, then tap a swatch to see it on the diary sketch.</p>
+        </article>
+        <article class="chapter" data-chapter="3" data-target="leather" hidden>
+          <p class="c-num"><span>04</span> of 05</p>
+          <h3 tabindex="-1">A closer look at leather</h3>
+          <p>Close-up photographs let the grain and finish do the explaining. Alongside each photograph, the diary sketch shows how the texture might look at your chosen size and in an approximate colour.</p>
+          <p class="try"><span>Try</span>Switch between Mara, Panama and Ludlow and look at how the grain changes.</p>
+        </article>
+        <article class="chapter" data-chapter="4" data-target="results" hidden>
+          <p class="c-num"><span>05</span> of 05</p>
+          <h3 tabindex="-1">A recommendation you can check</h3>
+          <p>The reveal explains which preferences each archive diary matches and where it differs. If none matches all four answers, you get an illustrated specification and any documented alternatives. You can edit one answer without losing the others.</p>
+          <p class="try"><span>Try</span>Compare an archive diary with your choices, or open Email my results for a copyable summary.</p>
+        </article>
+      </div>
+      <p class="lede" id="chapter-status" role="status"></p>
+    </div>
+
+    <nav class="guide-nav" aria-label="Chapters">
+      <button type="button" class="g-prev" id="g-prev"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4 6 10l6 6"/></svg><span>Previous</span></button>
+      <span class="g-pips" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      <button type="button" class="g-next" id="g-next"><span>Next</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 4 6 6-6 6"/></svg></button>
+    </nav>
+  </aside>
+</main>
+
+<div class="full-band" id="full-band">
+  <button type="button" class="exit-full" id="exit-full"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8 3v5H3M17 8h-5V3M12 17v-5h5M3 12h5v5"/></svg>Exit full screen</button>
+  <span class="kbd-hint" aria-hidden="true">or press Esc</span>
+</div>
+
+<script src="shell/shell.js"></script>
+</body>
+</html>
